@@ -1,0 +1,49 @@
+#header {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+#restart-btn {
+  height: 3rem;
+  padding: 0;
+  background-color: inherit;
+  border-width: 0;
+  margin-left: auto;
+  transition: scale 0. ease-in-out;
+}
+
+#restart-btn:hover {
+  transform: scale(1.2);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-width: 0;
+  border-radius: 12px;
+  background-color: rgb(197, 191, 191);
+  padding-top: 10px;
+  > img {
+    width: 80%;
+  }
+  
+  transition: transform 0.15s ease-in-out;
+}
+
+.cards:hover {
+  transform: translateY(-8px);
+}
+#all-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 510px) {
+  #all-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+}
