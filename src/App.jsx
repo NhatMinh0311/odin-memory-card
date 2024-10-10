@@ -11,7 +11,8 @@ function App() {
   const [successfulChoiceCnt, setSuccessfulChoiceCnt] = useState(0);
 
   function shuffleList(list) {
-      return list.sort(() => Math.random() - 0.5);
+    const copyList = list.map(pokemon => ({...pokemon}));
+    return copyList.sort(() => Math.random() - 0.5);
   }
   function handleClick(pokemonName) {
     const chosePokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
